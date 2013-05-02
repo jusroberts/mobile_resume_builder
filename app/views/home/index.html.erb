@@ -1,0 +1,30 @@
+<div class="navbar navbar-inner center">
+    <h1> Mobile Resume Builder </h1>
+</div>
+<div id="container">
+  <div id="form">
+    <%= form_tag do %>
+        <div class="form_entry">
+        <%= label_tag(:name, "Name") %>
+        <%= text_field_tag(:name) %>
+        </div>
+        <div class="form_entry">
+        <%= label_tag(:email, "Email") %>
+        <%= text_field_tag(:email) %>
+        </div>
+        <div class="form_entry">
+        <%= label_tag(:city, "City") %>
+        <%= text_field_tag(:city) %>
+        </div>
+        <div class="form_entry">
+        <%= label_tag(:state, "State") %>
+        <%= text_field_tag(:state) %>
+        </div>
+        <div class="form_entry">
+        <%= label_tag(:zip, "Zip Code") %>
+        <%= text_field_tag(:zip) %>
+        </div>
+    <% end %>
+      <%= link_to "Get Started!", experience_index_path, {:class=>"btn btn-large center"} %>
+  </div>
+</div>

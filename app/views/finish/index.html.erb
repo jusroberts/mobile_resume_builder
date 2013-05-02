@@ -1,0 +1,22 @@
+<div class="navbar navbar-inner center">
+  <h1> One last thing </h1>
+</div>
+<div id="container">
+  <div id="form">
+    <%= form_tag do %>
+        <div class="form_entry">
+          <%= label_tag(:password, "Password") %>
+          <%= password_field_tag(:password) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:subscribe, "Subscribe to things?") %>
+          <%= check_box_tag(:subscribe) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:terms, "Agree to our terms?") %>
+          <%= check_box_tag(:terms) %>
+        </div>
+    <% end %>
+      <%= link_to "Finish!", home_index_path, {:class=>"btn btn-large center"} %>
+  </div>
+</div>

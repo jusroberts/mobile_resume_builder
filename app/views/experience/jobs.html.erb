@@ -1,0 +1,32 @@
+<div class="navbar navbar-inner center">
+  <h1> Add Work Experience </h1>
+</div>
+<div id="container">
+  <div id="form">
+    <%= form_tag do %>
+        <div class="form_entry">
+          <%= label_tag(:name, "Company Name") %>
+          <%= text_field_tag(:name) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:title, "Job Title") %>
+          <%= text_field_tag(:title) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:start, "Start Date") %>
+          <%= select_tag :startMonth, options_for_select(["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]) %>
+          <%= select_tag :startYear, options_for_select(["2013","2012","2011","2010"]) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:end, "End Date") %>
+          <%= select_tag :endMonth, options_for_select(["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]) %>
+          <%= select_tag :endYear, options_for_select(["2013","2012","2011","2010"]) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:program, "Description (Optional)") %>
+          <%= text_field_tag(:program) %>
+        </div>
+    <% end %>
+      <%= link_to "Next", experience_index_path, {:class=>"btn btn-large center"} %>
+  </div>
+</div>

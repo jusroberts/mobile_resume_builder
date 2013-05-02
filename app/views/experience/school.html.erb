@@ -1,0 +1,31 @@
+<div class="navbar navbar-inner center">
+  <h1> Add School </h1>
+</div>
+<div id="container">
+  <div id="form">
+    <%= form_tag do %>
+        <div class="form_entry">
+          <%= label_tag(:type, "School Type") %>
+          <%= select_tag :type, options_for_select(["High School","College / University","Vocational","Medical"]) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:name, "School Name") %>
+          <%= text_field_tag(:name) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:diploma, "Diploma") %>
+          <%= select_tag :diploma, options_for_select(["High School","A.A.","A.S.","B.A.","B.S.","M.A.","M.S.","PhD","M.D.","Other"]) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:grad, "Graduation Date") %>
+          <%= select_tag :gradSeason, options_for_select(["Spring","Summer","Fall"]) %>
+          <%= select_tag :gradYear, options_for_select(["2013","2012","2011","2010"]) %>
+        </div>
+        <div class="form_entry">
+          <%= label_tag(:program, "Program") %>
+          <%= text_field_tag(:program) %>
+        </div>
+    <% end %>
+      <%= link_to "Next", experience_index_path, {:class=>"btn btn-large center"} %>
+  </div>
+</div>
